@@ -1,0 +1,130 @@
+## Clase 1 27/11/23 ##
+
+# Tipos de Datos #
+
+# int: numericos
+# float: numeros decimales
+# complex: numeros complejos
+# bool: True/False
+
+# Comandos Utiles #
+
+# print(): Mostrar por pantalla un mensaje
+# ej:
+# print("Hola Mundo!") 
+# print(nombre_variable)
+
+# type(): Conocer el tipo de datos de una variable
+# ej:
+# type(nombre_variable)
+
+# EJERCICIO NO. 1
+
+# Crear una variable llamada num_alumnos que almacene el valor 15
+
+num_alumnos = 15
+
+# Crear ima variable llamada altura que almacene el valor 1.78
+
+altura = 1.78
+
+# Crear una variable llamada prueba_logica que almacene el valor True
+
+prueba_logica = True
+
+# Mostrar por pantalla los valores de las variables num_alumnos, altura y prueba_logica
+
+print("***VARIABLES***")
+
+print("Variable num_alumnos:", num_alumnos, "\n"
+      "Variable altura:", altura, "\n"
+      "Variable prueba_logica:",prueba_logica)
+
+print("\n")
+# Mostrar por pantalla el tipo de datos que almacenan las variables num_alumnos, altura y prueba_logica
+
+print("***Tipos de datos***")
+
+print("Tipo de dato variable num_alumnos:", type(num_alumnos), "\n"
+       "Tipo de dato variable altura:", type(altura),"\n"
+       "Tipo de dato variable prueba_logica:", type(prueba_logica))
+
+print("\n")
+
+# Python no tiene tipo de dato char
+# Para declarar un string indicamos la cadena de caracteres entre comillas simples o dobles
+# Para acceder a los valores de la cadena, usamos indices mediante corchetes
+
+# Comandos utiles
+
+# Declarar la variable
+palabra = "variable"
+
+# Para pasar a mayusculas
+palabra.upper()
+
+# Para pasar a minusculas
+palabra.lower()
+
+# Para sustituir una letra por otra
+palabra.replace("v", "V")
+
+# Para acceder a las letras desde la posicion 1 a la 5 (si queremos hasta el final puede dejarse expresado solo con :)
+palabra[1:5]
+palabra[0:]
+
+# Para concatenar varios string se utiliza +
+palabra_plural = palabra + "s"
+
+# Para conocer la longitud de un string 
+len(palabra)
+
+# EJERCICIO NO. 2
+
+# Crear una variable llamada usuario que almacene el valor "antonio Torres"
+
+usuario = "antonio Torres"
+print("Variable usuario:",usuario, "\n")
+
+# Crear una variable llamada inicial_usuario que almacene la primera letra de la variable usuarios en mayusculas
+
+inicial_usuario = usuario[0].upper()
+print("Variable inicial_usuario:",inicial_usuario,"\n")
+
+# Generar una variable llamada email: reemplazando los espacios de la variable usuario por un punto y añadiendo al final: "@gmail.com"
+
+email = usuario.replace(" ", ".") + "@gmail.com"
+print("Variable email:",email,"\n")
+
+# Crear una variable llamada usuario_con_mayusculas que modifique la primera letra para que sea una mayuscula
+
+usuario_con_mayusculas = inicial_usuario + usuario[1:len(usuario)]
+# usuario_con_mayusculas = inicial_usuario + usuario[1:] otra forma de hacerlo
+print("Variable usuario_con_mayusculas:",usuario_con_mayusculas,"\n")
+
+# Funcion input()
+
+nombre = input("¿Cuál es tu nombre? ")
+print("Hola", nombre, "\n")
+
+apellido = input("¿Me podrías indicar tu apellido? ")
+print("Gracias!", "\n")
+
+user = nombre.lower() + "." + apellido.lower()
+correo = user + "@gmail.com"
+
+print("Le hemos creado un usuario con el siguiente formato nombre.apellido", "\n")
+
+usuario_correcto = False
+while usuario_correcto == False:
+    valida = input("Por favor colocar su usuario para confirmar que comprendío como se conforma ")
+    if valida == user:
+        print("Has entendido! Excelente!!")
+        usuario_correcto = True
+    else: 
+        print("No has comprendido la instricción!! Nota: para este sistema los usuarios se escriben en minuscula")
+
+
+
+
+
